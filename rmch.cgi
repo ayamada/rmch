@@ -333,7 +333,7 @@ __DATA__
 <body>
 <form enctype="multipart/form-data" method="POST" action="__FILE__" id="form">
 <h3>一枚絵の<code>hoge.png</code>からツクール形式の<code>img/characters/$hoge.png</code>を生成するやつ</h3>
-<div>この辺にpngファイルを放り込む(DnD可能)</div>
+<div>この辺にpngファイルを放り込む(ドラッグ＆ドロップ可能)</div>
 <div><input id="upload-file" name="file" type="file" /></div>
 <div><canvas id="preview-canvas" width="200" height="200"></canvas></div>
 <div>横<input type="text" name="resize_x" value="" />px、縦<input type="text" name="resize_y" value="" />pxに収まるサイズにアスペクト比維持しつつ拡大縮小してから処理する<br />(片方だけ指定するのがおすすめ、偶数指定推奨、上限__SIZE_LIMIT__pxまで、両方無指定なら上限突破可能)</div>
@@ -454,7 +454,7 @@ uploadFile.addEventListener('change', function (e) {
 <hr />
 <p><b>注意：これは「画像をサーバに送信して処理する奴」です。サーバの負荷が結構すごいので、不特定多数の人にurlを知られないよう注意してください(悪意のある人はサーバを屈服させる事が可能です…)。</b></p>
 <p>ソースコードを<a href="https://github.com/ayamada/rmch" target="_blank">github</a>にて公開しています。個人のサーバに設置して動かす事が可能です(要imagemagick)。</p>
-<p>サーバにpngquantがインストールされている場合、これを使って減色しサイズを軽量化します。</p>
-<p>偶数で拡大縮小指定した場合に限り、拡大縮小後の縦サイズか横サイズが奇数になった場合は1ドット分の透明ラインを追加し、偶数になるよう補正します。</p>
+<p>サーバにpngquantがインストールされている場合、これを使って減色しファイルサイズを軽量化します。</p>
+<p>偶数指定で拡大縮小指定した場合に限り、拡大縮小後の縦サイズか横サイズが奇数になった場合は1ドット分の透明ラインを追加し、偶数になるよう補正します。</p>
 </body>
 </html>

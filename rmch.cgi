@@ -32,7 +32,7 @@ use CGI;
 
 
 # 内容を更新したら忘れずにバージョンを上げる事
-my $version_rmch = "1.0.0";
+my $version_rmch = "1.0.2";
 
 
 
